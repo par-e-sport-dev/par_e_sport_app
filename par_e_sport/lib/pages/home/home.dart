@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'dart:math' as math;
+import 'package:par_e_sport/pages/home/widgets/new_games.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -6,14 +8,56 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("par.e.sport"), centerTitle: true),
+      appBar: AppBar(
+        title: Text(
+          "par.e.sport",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 35, fontFamily: "Inter"),
+        ),
+        foregroundColor: Colors.white,
+        centerTitle: true,
+        toolbarHeight: 80,
+        backgroundColor: Color(0xFF05001e),
+        elevation: 0,
+        flexibleSpace: Stack(
+          clipBehavior: Clip.none,
+          children: [
+            Align(
+              alignment: Alignment.topRight,
+              child: Transform.translate(
+                offset: Offset(-20, 60),
+                child: Transform.rotate(
+                  angle: math.pi / 4,
+                  child: Image.asset("Assets/img/trophy.png", width: 60),
+                ),
+              ),
+            ),
+
+            Align(
+              alignment: Alignment.topLeft,
+              child: Transform.translate(
+                offset: Offset(20, 20),
+                child: Transform.rotate(
+                  angle: math.pi / -4,
+                  child: Image.asset("Assets/img/controler.png", width: 60),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+
+      body: new_games(),
+
       bottomNavigationBar: NavigationBar(),
     );
   }
 
+  // ignore: non_constant_identifier_names
   Widget NavigationBar() {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
+      backgroundColor: Colors.white,
       items: [
         BottomNavigationBarItem(
           label: "Accueil",
