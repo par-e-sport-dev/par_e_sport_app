@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class NewGames extends StatelessWidget {
-  const NewGames({super.key});
+class UpdatesGames extends StatelessWidget {
+  const UpdatesGames({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class NewGames extends StatelessWidget {
           Row(
             children: [
               Text(
-                "Nouveaux Jeux",
+                "Mises à jours importante",
                 style: TextStyle(fontSize: 22, fontFamily: "Inter"),
               ),
               SizedBox(width: 20),
@@ -28,7 +28,6 @@ class NewGames extends StatelessWidget {
 
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-
             child: Row(
               children: [
                 Column(
@@ -36,15 +35,17 @@ class NewGames extends StatelessWidget {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(15),
                       child: Image.asset(
-                        "Assets/img/img_games/assassin_creed.png",
+                        "Assets/img/img_transfert/optictexas.png",
+                        fit: BoxFit.cover,
                         width: 120,
+                        height: 180,
                       ),
                     ),
                     Padding(padding: EdgeInsets.only(top: 10)),
                     Container(
                       width: 130,
                       child: Text(
-                        "Assasin's Creed: Shadows",
+                        "OpTic Texas se sépare de Pred",
                         style: TextStyle(fontFamily: "Inter"),
                         softWrap: true,
                         textAlign: TextAlign.center,
@@ -58,15 +59,17 @@ class NewGames extends StatelessWidget {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(15),
                       child: Image.asset(
-                        "Assets/img/img_games/doom.png",
+                        "Assets/img/img_transfert/perkz.png",
                         width: 120,
+                        height: 180,
+                        fit: BoxFit.cover,
                       ),
                     ),
                     Padding(padding: EdgeInsets.only(top: 10)),
                     Container(
                       width: 130,
                       child: Text(
-                        "Doom: The Dark Ages",
+                        "Perkz va quitter The Ruddy Sack",
                         style: TextStyle(fontFamily: "Inter"),
                         softWrap: true,
                         textAlign: TextAlign.center,
@@ -80,15 +83,17 @@ class NewGames extends StatelessWidget {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(15),
                       child: Image.asset(
-                        "Assets/img/img_games/clair_obscur.png",
+                        "Assets/img/img_transfert/croco.png",
                         width: 120,
+                        height: 180,
+                        fit: BoxFit.cover,
                       ),
                     ),
                     Padding(padding: EdgeInsets.only(top: 10)),
                     Container(
                       width: 130,
                       child: Text(
-                        "Clair Obscur: Expedition 33",
+                        "Croco de retour chez OK BRION",
                         style: TextStyle(fontFamily: "Inter"),
                         softWrap: true,
                         textAlign: TextAlign.center,
@@ -102,15 +107,17 @@ class NewGames extends StatelessWidget {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(15),
                       child: Image.asset(
-                        "Assets/img/img_games/gta.png",
+                        "Assets/img/img_transfert/gentlemates.png",
                         width: 120,
+                        height: 180,
+                        fit: BoxFit.cover,
                       ),
                     ),
                     Padding(padding: EdgeInsets.only(top: 10)),
                     Container(
                       width: 130,
                       child: Text(
-                        "Grand Thef Auto VI\n",
+                        "Gentle Mates mise sur Yujin en RLCS",
                         style: TextStyle(fontFamily: "Inter"),
                         softWrap: true,
                         textAlign: TextAlign.center,
@@ -124,18 +131,21 @@ class NewGames extends StatelessWidget {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(15),
                       child: Image.asset(
-                        "Assets/img/img_games/metal_gear.png",
+                        "Assets/img/img_transfert/theruddy.png",
                         width: 120,
+                        height: 180,
+                        fit: BoxFit.cover,
                       ),
                     ),
                     Padding(padding: EdgeInsets.only(top: 10)),
                     Container(
                       width: 130,
                       child: Text(
-                        "Metal Gear Solid Delta: Snake Eater",
+                        "The Ruddy Sack dévoile son nouveau roster avec Gaëthan",
                         style: TextStyle(fontFamily: "Inter"),
                         softWrap: true,
                         textAlign: TextAlign.center,
+                        maxLines: 2,
                       ),
                     ),
                   ],
