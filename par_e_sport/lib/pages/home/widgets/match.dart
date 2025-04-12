@@ -13,7 +13,7 @@ class MatchToSee extends StatelessWidget {
           Row(
             children: [
               Text(
-                "Mises à jours importante",
+                "Matchs à ne pas rater",
                 style: TextStyle(fontSize: 22, fontFamily: "Inter"),
               ),
               SizedBox(width: 20),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class UpdatesGames extends StatelessWidget {
-  const UpdatesGames({super.key});
+class PlayerTransfert extends StatelessWidget {
+  const PlayerTransfert({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class UpdatesGames extends StatelessWidget {
           Row(
             children: [
               Text(
-                "Mise à jours importante",
+                "Derniers transferts",
                 style: TextStyle(fontSize: 22, fontFamily: "Inter"),
               ),
               SizedBox(width: 20),
@@ -35,7 +35,7 @@ class UpdatesGames extends StatelessWidget {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(15),
                       child: Image.asset(
-                        "Assets/img/img_updates/minecraft.png",
+                        "Assets/img/img_transfert/optictexas.png",
                         fit: BoxFit.cover,
                         width: 120,
                         height: 180,
@@ -45,7 +45,7 @@ class UpdatesGames extends StatelessWidget {
                     Container(
                       width: 130,
                       child: Text(
-                        "Minecraft\n",
+                        "OpTic Texas se sépare de Pred",
                         style: TextStyle(fontFamily: "Inter"),
                         softWrap: true,
                         textAlign: TextAlign.center,
@@ -59,7 +59,7 @@ class UpdatesGames extends StatelessWidget {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(15),
                       child: Image.asset(
-                        "Assets/img/img_updates/jedi.png",
+                        "Assets/img/img_transfert/perkz.png",
                         width: 120,
                         height: 180,
                         fit: BoxFit.cover,
@@ -69,7 +69,7 @@ class UpdatesGames extends StatelessWidget {
                     Container(
                       width: 130,
                       child: Text(
-                        "Jedi Survivor\n",
+                        "Perkz va quitter The Ruddy Sack",
                         style: TextStyle(fontFamily: "Inter"),
                         softWrap: true,
                         textAlign: TextAlign.center,
@@ -83,7 +83,7 @@ class UpdatesGames extends StatelessWidget {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(15),
                       child: Image.asset(
-                        "Assets/img/img_updates/eve_vanguard.png",
+                        "Assets/img/img_transfert/croco.png",
                         width: 120,
                         height: 180,
                         fit: BoxFit.cover,
@@ -93,7 +93,7 @@ class UpdatesGames extends StatelessWidget {
                     Container(
                       width: 130,
                       child: Text(
-                        "EVE Vanguard\n",
+                        "Croco de retour chez OK BRION",
                         style: TextStyle(fontFamily: "Inter"),
                         softWrap: true,
                         textAlign: TextAlign.center,
@@ -107,7 +107,7 @@ class UpdatesGames extends StatelessWidget {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(15),
                       child: Image.asset(
-                        "Assets/img/img_updates/fs25.png",
+                        "Assets/img/img_transfert/gentlemates.png",
                         width: 120,
                         height: 180,
                         fit: BoxFit.cover,
@@ -117,7 +117,7 @@ class UpdatesGames extends StatelessWidget {
                     Container(
                       width: 130,
                       child: Text(
-                        "Farming Simulator 25",
+                        "Gentle Mates mise sur Yujin en RLCS",
                         style: TextStyle(fontFamily: "Inter"),
                         softWrap: true,
                         textAlign: TextAlign.center,
@@ -131,7 +131,7 @@ class UpdatesGames extends StatelessWidget {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(15),
                       child: Image.asset(
-                        "Assets/img/img_updates/helldivers2.png",
+                        "Assets/img/img_transfert/theruddy.png",
                         width: 120,
                         height: 180,
                         fit: BoxFit.cover,
@@ -141,7 +141,7 @@ class UpdatesGames extends StatelessWidget {
                     Container(
                       width: 130,
                       child: Text(
-                        "Helldivers II\n",
+                        "The Ruddy Sack dévoile son nouveau roster avec Gaëthan",
                         style: TextStyle(fontFamily: "Inter"),
                         softWrap: true,
                         textAlign: TextAlign.center,
