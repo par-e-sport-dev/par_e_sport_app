@@ -52,28 +52,28 @@ class _MainNavigationState extends State<MainNavigation> {
       backgroundColor: Colors.white,
       currentIndex: _selection,
       onTap: _onPress,
-      selectedItemColor: Color.fromARGB(108, 5, 0, 30),
+      selectedItemColor: Color(0x6C05001E),
 
       items: [
         BottomNavigationBarItem(
           label: "Accueil",
-          icon: Image.asset("Assets/img/accueil.png", width: 60),
+          icon: Image.asset("Assets/img/accueil.png", width: 40),
         ),
         BottomNavigationBarItem(
           label: "Pari",
-          icon: Image.asset("Assets/img/coin.png", width: 60),
+          icon: Image.asset("Assets/img/coin.png", width: 40),
         ),
         BottomNavigationBarItem(
           label: "Stream",
-          icon: Image.asset("Assets/img/video.png", width: 60),
+          icon: Image.asset("Assets/img/video.png", width: 40),
         ),
         BottomNavigationBarItem(
           label: "Amis",
-          icon: Image.asset("Assets/img/friends.png", width: 60),
+          icon: Image.asset("Assets/img/friends.png", width: 40),
         ),
         BottomNavigationBarItem(
           label: "Profile",
-          icon: Image.asset("Assets/img/profile.png", width: 60),
+          icon: Image.asset("Assets/img/profile.png", width: 40),
         ),
       ],
     );
