@@ -6,7 +6,7 @@ class TopSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: 20, left: 20, right: 20),
+      padding: EdgeInsets.only(top: 20, left: 20, right: 30),
       child: Row(
         children: [
           ClipRRect(

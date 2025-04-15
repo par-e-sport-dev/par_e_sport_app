@@ -62,8 +62,10 @@ flutter:
     - Assets/img/
     - Assets/img/img_games/
     - Assets/img/img_transfert/
-    - Assets/img/img_match/
     - Assets/img/img_updates/
+    - Assets/img/img_equipes/
+    - Assets/img/img_match/
+    - Assets/img/img_jeux/
 
   #   - images/a_dot_ham.jpeg
 

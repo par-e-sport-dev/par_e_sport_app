@@ -10,7 +10,7 @@ class PariSection extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(10),
         child: Container(
-          color: Color(0x626A6A6D),
+          //color: Color(0x626A6A6D),
           child: Column(
             children: [
               Text(

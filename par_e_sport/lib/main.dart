@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:par_e_sport/pages/home/home.dart';
 import 'package:par_e_sport/pages/pari/pari.dart';
+import 'package:par_e_sport/pages/stream/stream.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +30,7 @@ class MainNavigation extends StatefulWidget {
 class _MainNavigationState extends State<MainNavigation> {
   int _selection = 0;
 
-  final List<Widget> _pages = [HomePage(), Pari()];
+  final List<Widget> _pages = [HomePage(), Pari(), StreamPage()];
 
   void _onPress(int index) {
     setState(() {
