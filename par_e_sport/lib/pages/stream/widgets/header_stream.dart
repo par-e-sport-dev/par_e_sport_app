@@ -17,13 +17,14 @@ class HeaderStream extends StatelessWidget {
             ),
           ),
           Padding(padding: EdgeInsets.only(top: 10)),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
 
-            child: ClipRRect(
-              borderRadius: BorderRadius.all(Radius.circular(10)),
-              child: Container(
-                color: Color(0xEEE5E5E5),
+          ClipRRect(
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+            child: Container(
+              color: Color(0xEEE5E5E5),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+
                 child: Row(
                   children: [
                     Padding(

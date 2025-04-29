@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:par_e_sport/pages/pari/widgets/classement.dart';
 
 class TopSection extends StatelessWidget {
-  const TopSection({super.key});
+  TopSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,11 +32,30 @@ class TopSection extends StatelessWidget {
 
           Spacer(),
 
-          Text("100", style: TextStyle(fontFamily: "Inter")),
-          SizedBox(width: 10),
-          Image.asset("Assets/img/toffi.png", width: 30),
+          CoinsSection(coins: 100),
         ],
       ),
+    );
+  }
+}
+
+class CoinsSection extends StatefulWidget {
+  final double coins;
+  const CoinsSection({super.key, required this.coins});
+
+  @override
+  _CoinsSectionState createState() => _CoinsSectionState();
+}
+
+class _CoinsSectionState extends State<CoinsSection> {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Text("${widget.coins}", style: TextStyle(fontFamily: "Inter")),
+        SizedBox(width: 10),
+        Image.asset("Assets/img/toffi.png", width: 30),
+      ],
     );
   }
 }

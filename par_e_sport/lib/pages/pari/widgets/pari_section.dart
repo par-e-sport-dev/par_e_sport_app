@@ -1,7 +1,143 @@
 import 'package:flutter/material.dart';
+import 'package:par_e_sport/pages/pari/widgets/top_section.dart';
 
-class PariSection extends StatelessWidget {
+class PariSection extends StatefulWidget {
   const PariSection({super.key});
+
+  @override
+  State<PariSection> createState() => _PariSectionState();
+}
+
+class _PariSectionState extends State<PariSection> {
+  double total = 100;
+  bool IsSelectedEq1 = false;
+  bool IsSelectedEq2 = false;
+
+  void _showInputDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(
+            "Paris pour :\nFragster Challenger Series",
+            textAlign: TextAlign.center,
+          ),
+          content: SizedBox(
+            height: 100,
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        setState(() {
+                          if (IsSelectedEq1 == false) {
+                            IsSelectedEq1 = true;
+                            Navigator.of(context).pop();
+                            _showInputDialog();
+                          } else if (IsSelectedEq1 == true) {
+                            IsSelectedEq1 = false;
+                            Navigator.of(context).pop();
+                            _showInputDialog();
+                          }
+                          ;
+                        });
+                      },
+                      style: ButtonStyle(
+                        backgroundColor: WidgetStateProperty.all(
+                          IsSelectedEq1
+                              ? const Color.fromARGB(255, 221, 121, 27)
+                              : Colors.grey[300],
+                        ),
+                        foregroundColor: WidgetStateProperty.all(
+                          IsSelectedEq1 ? Colors.white : Colors.black,
+                        ),
+                        overlayColor: WidgetStateProperty.all(
+                          Colors.blueGrey[100], // petit effet au clic
+                        ),
+                      ),
+
+                      child: Text("ARCRED"),
+                    ),
+                    Spacer(),
+
+                    TextButton(
+                      onPressed: () {
+                        setState(() {
+                          if (IsSelectedEq2 == false) {
+                            IsSelectedEq2 = true;
+                            Navigator.of(context).pop();
+                            _showInputDialog();
+                          } else if (IsSelectedEq2 == true) {
+                            IsSelectedEq2 = false;
+                            Navigator.of(context).pop();
+                            _showInputDialog();
+                          }
+                          ;
+                        });
+                      },
+                      style: ButtonStyle(
+                        backgroundColor: WidgetStateProperty.all(
+                          IsSelectedEq2
+                              ? const Color.fromARGB(255, 221, 121, 27)
+                              : Colors.grey[300],
+                        ),
+                        foregroundColor: WidgetStateProperty.all(
+                          IsSelectedEq2 ? Colors.white : Colors.black,
+                        ),
+                        overlayColor: WidgetStateProperty.all(
+                          Colors.blueGrey[100], // petit effet au clic
+                        ),
+                      ),
+
+                      child: Text("Johny Speeds"),
+                    ),
+                  ],
+                ),
+                TextField(
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(hintText: "Faite vos paris !!"),
+                  controller: _controller,
+                ),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(); // Ferme la boîte de dialogue
+              },
+              child: Text("Annuler"),
+            ),
+            TextButton(
+              onPressed: () {
+                double? value = double.tryParse(
+                  _controller.text,
+                ); // Convertir la valeur entrée
+                if (value != null) {
+                  setState(() {
+                    total -= value; // Soustraire la valeur au total
+                  });
+                }
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CoinsSection(coins: total),
+                  ),
+                );
+
+                Navigator.of(context).pop(); // Ferme la boîte de dialogue
+              },
+              child: Text("Parier"),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  final TextEditingController _controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -100,14 +236,38 @@ class PariSection extends StatelessWidget {
                                     ClipRRect(
                                       borderRadius: BorderRadius.circular(5),
                                       child: Container(
-                                        color: Colors.orange,
-                                        child: Padding(
-                                          padding: EdgeInsets.all(5),
-                                          child: Text(
-                                            "PARIER",
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 20,
+                                        height: 40,
+                                        color: Colors.transparent,
+                                        child: ElevatedButton(
+                                          onPressed: _showInputDialog,
+
+                                          style: ElevatedButton.styleFrom(
+                                            foregroundColor: Colors.black,
+                                            backgroundColor:
+                                                Colors
+                                                    .transparent, // Retire la couleur du texte (texte noir ici)
+                                            shadowColor:
+                                                Colors
+                                                    .transparent, // Retire l'ombre (pas d'effet d'élévation)
+                                            elevation:
+                                                0, // Enlève l'élévation (pas d'effet de levée)
+                                            padding: EdgeInsets.zero,
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(5),
+                                            ), // Retire toute marge interne
+                                          ),
+                                          child: Container(
+                                            color: Colors.orange,
+                                            child: Padding(
+                                              padding: EdgeInsets.all(5),
+                                              child: Text(
+                                                "PARIER",
+                                                style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 20,
+                                                ),
+                                              ),
                                             ),
                                           ),
                                         ),

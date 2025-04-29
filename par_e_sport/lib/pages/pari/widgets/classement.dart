@@ -57,7 +57,7 @@ class Classement extends StatelessWidget {
                           style: TextStyle(fontFamily: "Inter"),
                         ),
                         Text(
-                          "${player['points']} pts",
+                          "${player['points']}   toffis",
                           style: TextStyle(fontFamily: "Inter"),
                         ),
                       ],
