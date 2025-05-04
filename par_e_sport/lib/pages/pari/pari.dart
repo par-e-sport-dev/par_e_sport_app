@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:par_e_sport/pages/appbar.dart';
-import 'package:par_e_sport/pages/pari/widgets/pari_section.dart';
 import 'package:par_e_sport/pages/pari/widgets/top_section.dart';
 
 class Pari extends StatelessWidget {
@@ -10,7 +9,7 @@ class Pari extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MyAppBar(),
-      body: ListView(children: [TopSection(), PariSection()]),
+      body: ListView(children: [TopSection()]),
     );
   }
 }
