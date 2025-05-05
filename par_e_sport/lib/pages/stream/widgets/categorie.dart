@@ -13,7 +13,7 @@ class CategoriePage extends StatelessWidget {
             padding: EdgeInsets.only(bottom: 20),
             alignment: Alignment.centerLeft,
             child: Text(
-              "Catégorie",
+              "Catégories",
               style: TextStyle(fontFamily: "Inter", fontSize: 25),
             ),
           ),

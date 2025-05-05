@@ -12,7 +12,7 @@ class UpdatesGames extends StatelessWidget {
           Row(
             children: [
               Text(
-                "Mise à jours importante",
+                "Mises à jour importantes",
                 style: TextStyle(fontSize: 22, fontFamily: "Inter"),
               ),
               SizedBox(width: 20),

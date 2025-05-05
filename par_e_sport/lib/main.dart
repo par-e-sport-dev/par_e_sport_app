@@ -69,7 +69,7 @@ class _MainNavigationState extends State<MainNavigation> {
           icon: Image.asset("Assets/img/accueil.png", width: 40),
         ),
         BottomNavigationBarItem(
-          label: "Pari",
+          label: "Paris",
           icon: Image.asset("Assets/img/coin.png", width: 40),
         ),
         BottomNavigationBarItem(
@@ -81,7 +81,7 @@ class _MainNavigationState extends State<MainNavigation> {
           icon: Image.asset("Assets/img/friends.png", width: 40),
         ),
         BottomNavigationBarItem(
-          label: "Profile",
+          label: "Profil",
           icon: Image.asset("Assets/img/profile.png", width: 40),
         ),
       ],

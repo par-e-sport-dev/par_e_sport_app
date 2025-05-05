@@ -105,7 +105,11 @@ class _TopSectionState extends State<TopSection> {
           actions: <Widget>[
             TextButton(
               onPressed: () {
-                Navigator.of(context).pop(); // Ferme la boîte de dialogue
+                Navigator.of(context).pop();
+                IsSelectedEq1 = false;
+                IsSelectedEq2 = false;
+
+                /// Ferme la boîte de dialogue
               },
               child: Text("Annuler"),
             ),
@@ -120,7 +124,10 @@ class _TopSectionState extends State<TopSection> {
                   });
                 }
 
-                Navigator.of(context).pop(); // Ferme la boîte de dialogue
+                Navigator.of(context).pop();
+
+                IsSelectedEq1 = false;
+                IsSelectedEq2 = false; // Ferme la boîte de dialogue
               },
               child: Text("Parier"),
             ),
