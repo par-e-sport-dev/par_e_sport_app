@@ -64,4 +64,4 @@ aslik : https://github.com/aslikerzz
 
 Ce projet n’a aucune vocation commerciale.
 Les paris utilisent une monnaie fictive et ne représentent aucune transaction financière réelle.
-eSportBet promeut un usage responsable et ludique de l’univers du e-sport.
+par-e-sport promeut un usage responsable et ludique de l’univers du e-sport.
